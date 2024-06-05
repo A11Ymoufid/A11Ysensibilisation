@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
+
+$background-color: #ffffff;
+$NCfont: #7c7c7c;
+$NCfontLink: #bdbdbd;
+$Ctitle: #555555;
+$NCbuttonFont: #ffffff;
+$NCbuttonBackground: #01aa9d;
+$NCsvg: #dedfe7;
+$Csvg: black;
+$NCanim: #e27474;
+$Canim: green;
+
+$Cfont: black;
+
+// $NCbuttonFont :#ffffff;
+$CbuttonBackground: #018076;
+// $NCsvg :#dedfe7;
+// $NCanim : #e27474;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: black;
+  width: 90%;
+  margin: 1rem 2rem 2rem 1rem;
+
+  .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+  .skiplink {
+    display: none;
+  }
+  .header {
+    // height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .nav {
+      display: none;
+    }
+
+    .header-logo {
+      .icon {
+        max-width: 5rem;
+        max-height: 5rem;
+        margin-right: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .club-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $NCbuttonBackground;
+    }
+
+    .club-nameC {
+      color: $CbuttonBackground;
+    }
+  }
+
+  #mobile-nav {
+    background-color: $CbuttonBackground;
+    margin: Opx auto;
+    display: none;
+    margin-bottom: 1rem;
+
+    .nav {
+      width: 100%;
+      padding: 20px 0px;
+
+      .ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 5px;
+
+        li {
+          width: 100%;
+          padding: 10px;
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            &:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav-btn {
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
+  .home {
+    .section {
+      margin-top: 3rem;
+
+      p.bullet {
+        margin-top: 0.7rem;
+        margin-left: 1rem;
+        color: $NCfont;
+        text-align: justify;
+        font-size: 0.9rem;
+
+        a {
+          color: $NCfontLink;
+          text-decoration: none;
+        }
+        a:focus {
+          outline: none;
+        }
+      }
+
+      p.Cbullet {
+        color: $Cfont;
+
+        a {
+          color: $Cfont;
+          text-decoration: underline;
+        }
+
+        a:focus {
+          outline: 2px solid black;
+        }
+      }
+
+      .imgdeco {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+
+        img {
+          max-width: 7rem;
+        }
+      }
+      .ul2 {
+        margin-left: 2rem;
+        font-size: 0.9rem;
+        color: $NCfont;
+      }
+
+      .Cul2 {
+        color: $Cfont;
+      }
+
+      .Sul {
+        padding-top: 0.5rem;
+        padding-left: 3rem;
+      }
+    }
+
+    .h1 {
+      font-size: 40px;
+      color: $Ctitle;
+      font-weight: 900;
+      margin-bottom: 0.7rem;
+    }
+
+    .h2 {
+      font-size: 20px;
+      color: $Ctitle;
+      font-weight: 900;
+      margin-top: 2rem;
+    }
+
+    .h3 {
+      margin-top: 2rem;
+      font-weight: 900;
+      color: $Ctitle;
+    }
+
+    .stats {
+      img {
+        // max-width: 30rem;
+        width: 100%;
+        margin-top: 1rem;
+        border: 1px solid #cccccc;
+      }
+      .disclosure {
+        #toggleButton {
+          background: $CbuttonBackground;
+          color: $NCbuttonFont;
+          margin-top: 10px;
+          padding: 15px;
+          border: 0;
+          border-radius: 5px;
+          font-weight: 500;
+          font-size: 1rem;
+          margin-left: 1rem;
+        }
+
+        #content {
+          display: none;
+          margin-top: 1rem;
+          padding-left: 2rem;
+          font-size: 0.9rem;
+
+          ul {
+            margin-left: 3rem;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    form {
+      .form-group {
+        margin-top: 2rem;
+
+        .label {
+          color: $Cfont;
+        }
+
+        input {
+          background: #ffffff;
+          padding: 10px 15px;
+          width: 230px;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          margin-top: 0.75rem;
+        }
+
+        button {
+          background: $NCbuttonBackground;
+          color: $NCbuttonFont;
+          padding: 15px;
+          border: 0;
+          border-radius: 5px;
+          font-weight: 500;
+          font-size: 1rem;
+          margin-top: 0.75rem;
+        }
+      }
+
+      .Cform-group {
+        button {
+          background: $CbuttonBackground;
+        }
+      }
+    }
+
+    .social {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      .ul {
+        list-style-type: none;
+        display: flex;
+        column-gap: 12px;
+        justify-content: left;
+
+        li {
+          a {
+            svg {
+              width: 30px;
+              fill: $NCsvg;
+            }
+          }
+        }
+      }
+    }
+
+    .Csocial {
+      .ul {
+        li {
+          a {
+            svg {
+              fill: $Csvg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 2rem;
+
+    .fly {
+      animation: 2s anim-lineUp ease-out infinite;
+      color: $NCanim;
+    }
+
+    .Cfly {
+      animation: 0s;
+      color: $Canim;
+    }
+
+    .copyright {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 2rem;
+      color: $NCfont;
+    }
+
+    .numerikea {
+      img {
+        max-width: 8rem;
+        padding-left: 0.5rem;
+        vertical-align: center;
+      }
+    }
+
+    .Ccopyright {
+      color: $Cfont;
+    }
+
+    @keyframes anim-lineUp {
+      0% {
+        opacity: 0;
+        transform: translateY(80%);
+      }
+      20% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 959px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .skiplink {
+      display: block;
+
+      .nav__tier--1 {
+        list-style: none;
+      }
+
+      a:focus {
+        background-color: black;
+        color: white;
+        outline: 3px solid black;
+      }
+
+      .hide-text {
+        a {
+          position: absolute;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          padding: 0;
+          border: 0;
+          &:focus {
+            position: relative;
+            overflow: visible;
+            clip: auto;
+            height: auto;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    .header {
+      .nav {
+        display: block;
+
+        .ul {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          column-gap: 18px;
+
+          li {
+            a {
+              text-decoration: none;
+              color: $Cfont;
+              font-weight: 700;
+            }
+
+            &:last-of-type {
+              a {
+                background: $CbuttonBackground;
+                color: $NCbuttonFont;
+                padding: 15px;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                font-weight: 500;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .header-logo {
+        .icon {
+          max-width: 9rem;
+          max-height: 9rem;
+        }
+      }
+    }
+
+    .home {
+      .section {
+        .stats {
+          img {
+            max-width: 30rem;
+          }
+        }
+      }
+    }
+
+    .mobile-nav-btn {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+//ACCORDEON
+.section2 {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Accordion {
+  border: 1px solid hsl(0, 0%, 82%);
+  border-radius: 0.3em;
+  box-shadow: 0 1px 2px hsl(0, 0%, 82%);
+  max-width: 900px;
+  min-width: 320px;
+  width: 100%;
+}
+.Accordion > * + * {
+  border-top: 1px solid hsl(0, 0%, 82%);
+}
+.Accordion-trigger {
+  background: none;
+  border: 0;
+  color: hsl(0, 0%, 13%);
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+.Accordion dt:first-child .Accordion-trigger {
+  border-radius: 0.3em 0.3em 0 0;
+}
+.Accordion-trigger:focus,
+.Accordion-trigger:hover {
+  background: hsl(0, 0%, 93%);
+}
+.Accordion-title {
+  display: block;
+  /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/8295099/ */
+  pointer-events: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.Accordion-icon {
+  border: solid hsl(0, 0%, 62%);
+  border-width: 0 2px 2px 0;
+  height: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+  width: 0.5rem;
+}
+.Accordion-trigger:focus .Accordion-icon,
+.Accordion-trigger:hover .Accordion-icon {
+  border-color: hsl(0, 0%, 13%);
+}
+.Accordion-trigger[aria-expanded="true"] .Accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+}
+.Accordion-panel {
+  margin: 0;
+  padding: 1em 1.5em;
+}
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.Accordion-panel[hidden] {
+  display: none;
+}
+
+.capture {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  img {
+    width: 100%;
+    max-width: max-content;
+    border: 1px solid black;
+  }
+}
+
+/* Style pour les balises <code> */
+code {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  display: inline-block;
+}
